@@ -10,46 +10,33 @@ import BottomTabNavigation from "./navigation/BottomTabNavigation";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [fontsLoaded] = useFonts({
-    regular: require("./assets/fonts/Poppins-Regular.ttf"),
-    light: require("./assets/fonts/Poppins-Light.ttf"),
-    bold: require("./assets/fonts/Poppins-Bold.ttf"),
-    medium: require("./assets/fonts/Poppins-Medium.ttf"),
-    extraBold: require("./assets/fonts/Poppins-ExtraBold.ttf"),
-    semiBold: require("./assets/fonts/Poppins-SemiBold.ttf"),
-  });
+	const [fontsLoaded] = useFonts({
+		regular: require("./assets/fonts/Poppins-Regular.ttf"),
+		light: require("./assets/fonts/Poppins-Light.ttf"),
+		bold: require("./assets/fonts/Poppins-Bold.ttf"),
+		medium: require("./assets/fonts/Poppins-Medium.ttf"),
+		extraBold: require("./assets/fonts/Poppins-ExtraBold.ttf"),
+		semiBold: require("./assets/fonts/Poppins-SemiBold.ttf"),
+	});
 
-  const onLayoutRootView = useCallback(async () => {
-    if (fontsLoaded) {
-      await SpashScreen.hideAsync();
-    }
-  }, [fontsLoaded]);
+	const onLayoutRootView = useCallback(async () => {
+		if (fontsLoaded) {
+			await SpashScreen.hideAsync();
+		}
+	}, [fontsLoaded]);
 
-  if (!fontsLoaded) {
-    return null;
-  }
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Bottom Navigation"
-          component={BottomTabNavigation}
-          options={{ headerShown: false }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+	if (!fontsLoaded) {
+		return null;
+	}
+	return (
+		<NavigationContainer>
+			<Stack.Navigator>
+				<Stack.Screen
+					name="Bottom Navigation"
+					component={BottomTabNavigation}
+					options={{ headerShown: false }}
+				/>
+			</Stack.Navigator>
+		</NavigationContainer>
+	);
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  textStyle: {
-    fontFamily: "extraBold",
-    fontSize: 20,
-  },
-});
