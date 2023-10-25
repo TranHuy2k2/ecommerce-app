@@ -9,6 +9,8 @@ import styles from "./home.style";
 import { Ionicons, Fontisto } from "@expo/vector-icons";
 import { Welcome } from "../components";
 import Carousel from "@components/home/Carousel";
+import Heading from "@components/home/Heading";
+import ProductsRow from "../components/products/ProductsRow";
 export default function Home() {
 	return (
 		<SafeAreaView>
@@ -44,6 +46,9 @@ export default function Home() {
 			<ScrollView>
 				<Welcome />
 				<Carousel />
+				<Heading />
+				<ProductsRow />
+				<View style={{ height: 150 }}></View>
 			</ScrollView>
 		</SafeAreaView>
 	);

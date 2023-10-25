@@ -7,12 +7,13 @@ const styles = StyleSheet.create({
 	},
 	appBarWrapper: {
 		marginHorizontal: 22,
-		marginTop: SIZES.small,
 	},
 	appBar: {
 		flexDirection: "row",
 		justifyContent: "space-between",
 		alignItems: "center",
+		paddingHorizontal: 12,
+		paddingVertical: 24,
 	},
 	location: {
 		fontFamily: "bold",
