@@ -8,7 +8,6 @@ import fn4 from "@assets/images/fn4.jpg";
 import fn5 from "@assets/images/fn5.jpg";
 const sliders = [
 	// "https://i.pinimg.com/564x/9e/95/dd/9e95dd0fe8fcf76b50056ee3e67433e2.jpg",
-	fn1,
 	fn2,
 	fn3,
 	fn4,

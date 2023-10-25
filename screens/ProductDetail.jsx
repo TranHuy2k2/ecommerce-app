@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import styles from "./ProductDetail.style";
 import {
+	Fontisto,
 	Ionicons,
 	MaterialCommunityIcons,
 	SimpleLineIcons,
@@ -140,6 +141,23 @@ export default function ProductDetail({ navigation }) {
 							Free Shipping
 						</Text>
 					</View>
+				</View>
+				<View style={styles.cartRow}>
+					<TouchableOpacity style={styles.buyBtn}>
+						<Text style={styles.buyText}>
+							Buy Now
+						</Text>
+					</TouchableOpacity>
+					<TouchableOpacity
+						style={styles.cartBtn}
+					>
+						<Fontisto
+							name="shopping-bag"
+							size={18}
+							color={COLORS.white}
+							style={styles.cart}
+						/>
+					</TouchableOpacity>
 				</View>
 			</View>
 		</SafeAreaView>
