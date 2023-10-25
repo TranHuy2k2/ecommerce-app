@@ -1,15 +1,10 @@
 import { SafeAreaView, Text, View } from "react-native";
+import SearchBar from "@components/shared/search/SearchBar";
 
 export default function Search() {
 	return (
-		<SafeAreaView
-			style={{
-				flex: 1,
-				alignItems: "center",
-				justifyContent: "center",
-			}}
-		>
-			<Text>Search Screen</Text>
+		<SafeAreaView>
+			<SearchBar />
 		</SafeAreaView>
 	);
 }
